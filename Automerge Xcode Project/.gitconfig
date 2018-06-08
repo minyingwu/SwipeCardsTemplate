@@ -1,0 +1,3 @@
+[merge "mergepbx"]
+	name = RobotClone.xcodeproj
+	driver = mergepbx %0 %A %B
