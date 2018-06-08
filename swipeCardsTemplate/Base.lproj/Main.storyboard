@@ -147,12 +147,21 @@
                                                                             <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                         </state>
                                                                     </button>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jd-P2-b6V">
+                                                                        <rect key="frame" x="0.0" y="10" width="42" height="21"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
                                                                 </subviews>
                                                             </view>
                                                             <constraints>
+                                                                <constraint firstItem="7jd-P2-b6V" firstAttribute="top" secondItem="ief-72-HQq" secondAttribute="top" constant="10" id="Ejb-dU-IGC"/>
                                                                 <constraint firstAttribute="bottom" secondItem="KJw-ab-iSN" secondAttribute="bottom" constant="10" id="JZ4-9L-b91"/>
                                                                 <constraint firstItem="RT2-n0-Brm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ief-72-HQq" secondAttribute="leading" symbolic="YES" id="NTr-wZ-M6X"/>
+                                                                <constraint firstItem="7jd-P2-b6V" firstAttribute="leading" secondItem="ief-72-HQq" secondAttribute="leading" id="Oy2-vg-ieA"/>
                                                                 <constraint firstAttribute="bottom" secondItem="RT2-n0-Brm" secondAttribute="bottom" id="ZI8-Yd-QXb"/>
+                                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7jd-P2-b6V" secondAttribute="trailing" symbolic="YES" id="bTx-X8-Poh"/>
                                                                 <constraint firstAttribute="trailing" secondItem="KJw-ab-iSN" secondAttribute="trailing" id="pWl-6C-Ura"/>
                                                                 <constraint firstItem="KJw-ab-iSN" firstAttribute="leading" secondItem="ief-72-HQq" secondAttribute="leading" id="w91-Mq-yV6"/>
                                                                 <constraint firstAttribute="trailing" secondItem="RT2-n0-Brm" secondAttribute="trailing" id="xCE-We-OjG"/>
@@ -161,6 +170,7 @@
                                                             <connections>
                                                                 <outlet property="mButton" destination="RT2-n0-Brm" id="0Gc-3c-PxA"/>
                                                                 <outlet property="mImageView" destination="KJw-ab-iSN" id="Mbj-Og-ExP"/>
+                                                                <outlet property="mLabel" destination="7jd-P2-b6V" id="vg2-gs-yRs"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>

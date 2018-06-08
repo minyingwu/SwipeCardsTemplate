@@ -13,6 +13,8 @@ class OrderCell: UICollectionViewCell {
     
     @IBOutlet weak var mButton: UIButton!
     
+    @IBOutlet weak var mLabel: UILabel!
+    
     override func prepareForReuse() {
         super.prepareForReuse()
     }

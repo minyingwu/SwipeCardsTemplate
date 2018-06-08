@@ -17,6 +17,7 @@ class CategoryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        mTableView.separatorStyle = .none
         setupViewModel()
     }
     
