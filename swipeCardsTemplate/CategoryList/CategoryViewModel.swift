@@ -26,8 +26,9 @@ class CategoryViewModel {
     var updateLoadingClosure: (()->())?
     
     func setCategories() {
-        mCategoryModels = [CategoryModel(headerTitle: "Song List"),
-                           CategoryModel(headerTitle: "Order List")]
+        mCategoryModels = [CategoryModel(headerTitle: "Blue Purple"),
+                           CategoryModel(headerTitle: "Pink"),
+                           CategoryModel(headerTitle: "White")]
     }
     
     func getCategory(at index: Int) -> CategoryModel? {

@@ -8,6 +8,12 @@
 
 import UIKit
 
+protocol TableCellStateChangedDelegate: class {
+    func showAlert()
+    func updateLoading()
+    func forwardNextPage()
+}
+
 class BaseRowCard: UITableViewCell {
     @IBOutlet weak var mCollectionView: UICollectionView!
     
@@ -18,6 +24,8 @@ class BaseRowCard: UITableViewCell {
     @IBOutlet weak var mCollectionViewLeftWidth: NSLayoutConstraint!
     
     internal var cardViewModel: CardViewModel!
+    
+    internal weak var delegate: TableCellStateChangedDelegate?
     
     internal var startAutoIndex: Int = 1
     
@@ -46,8 +54,8 @@ class BaseRowCard: UITableViewCell {
         mPageControl.numberOfPages = Int(INIT_PAGE_NUM)
         
         // Optional
-        mPageControl.pageIndicatorTintColor = UIColor.darkGray.withAlphaComponent(0.2)
-        mPageControl.currentPageIndicatorTintColor = UIColor.darkGray
+        mPageControl.pageIndicatorTintColor = .white
+        mPageControl.currentPageIndicatorTintColor = .yellow
     }
     
     func setupViewModel() {
@@ -71,7 +79,7 @@ class BaseRowCard: UITableViewCell {
     
     private func startGlobalAutoSwipe() {
         let numberOfModels = self.cardViewModel.numberOfCards
-        autoScrollTimer = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true) { _ in
+        autoScrollTimer = Timer.scheduledTimer(withTimeInterval: 6.0, repeats: true) { _ in
             DispatchQueue.main.async {
                 let indexPath = IndexPath(item: self.startAutoIndex, section: 0)
 //                print("Index: \(indexPath)")

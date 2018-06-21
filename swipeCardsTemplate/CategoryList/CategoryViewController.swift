@@ -42,7 +42,7 @@ class CategoryViewController: UIViewController {
 
 extension CategoryViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100.0
+        return 225
     }
 }
 
@@ -62,11 +62,15 @@ extension CategoryViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "song_card") as! SongRowCard
+            let cell = tableView.dequeueReusableCell(withIdentifier: "blue_purple_flower") as! BluePurpleFlowerRowCard
             cell.selectionStyle = .none
             return cell
         case 1:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "order_card") as! OrderRowCard
+            let cell = tableView.dequeueReusableCell(withIdentifier: "pink_flower") as! PinkFlowerRowCard
+            cell.selectionStyle = .none
+            return cell
+        case 2:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "white_flower") as! WhiteFlowerRowCard
             cell.selectionStyle = .none
             return cell
         default:
